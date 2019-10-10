@@ -7,5 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class StatusComplaint extends Model
 {
     protected $fillable = [
+    'comment',
+    'complaint_id',
     ];
 }

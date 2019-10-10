@@ -8,6 +8,10 @@ class Complaint extends Model
 {
 
   protected $fillable = [
+    'informer_id',
+    'denounced_id',
+    'description',
+    'department_id',
   ];
 
   public function informer () {
