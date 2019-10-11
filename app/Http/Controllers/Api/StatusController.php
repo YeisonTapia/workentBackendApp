@@ -1,11 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api;
 
-use App\StatusComplaint;
+use App\Status;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
-class StatusComplaintController extends Controller
+class StatusController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -41,10 +42,10 @@ class StatusComplaintController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\StatusComplaint  $statusComplaint
+     * @param  \App\Status  $status
      * @return \Illuminate\Http\Response
      */
-    public function show(StatusComplaint $statusComplaint)
+    public function show(Status $status)
     {
         //
     }
@@ -52,10 +53,10 @@ class StatusComplaintController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\StatusComplaint  $statusComplaint
+     * @param  \App\Status  $status
      * @return \Illuminate\Http\Response
      */
-    public function edit(StatusComplaint $statusComplaint)
+    public function edit(Status $status)
     {
         //
     }
@@ -64,10 +65,10 @@ class StatusComplaintController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\StatusComplaint  $statusComplaint
+     * @param  \App\Status  $status
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, StatusComplaint $statusComplaint)
+    public function update(Request $request, Status $status)
     {
         //
     }
@@ -75,10 +76,10 @@ class StatusComplaintController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\StatusComplaint  $statusComplaint
+     * @param  \App\Status  $status
      * @return \Illuminate\Http\Response
      */
-    public function destroy(StatusComplaint $statusComplaint)
+    public function destroy(Status $status)
     {
         //
     }

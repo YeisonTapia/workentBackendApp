@@ -1,11 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api;
 
-use App\Status;
+use App\Complaint;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
-class StatusController extends Controller
+class ComplaintController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -41,10 +42,10 @@ class StatusController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Status  $status
+     * @param  \App\Complaint  $complaint
      * @return \Illuminate\Http\Response
      */
-    public function show(Status $status)
+    public function show(Complaint $complaint)
     {
         //
     }
@@ -52,10 +53,10 @@ class StatusController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Status  $status
+     * @param  \App\Complaint  $complaint
      * @return \Illuminate\Http\Response
      */
-    public function edit(Status $status)
+    public function edit(Complaint $complaint)
     {
         //
     }
@@ -64,10 +65,10 @@ class StatusController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Status  $status
+     * @param  \App\Complaint  $complaint
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Status $status)
+    public function update(Request $request, Complaint $complaint)
     {
         //
     }
@@ -75,10 +76,10 @@ class StatusController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Status  $status
+     * @param  \App\Complaint  $complaint
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Status $status)
+    public function destroy(Complaint $complaint)
     {
         //
     }

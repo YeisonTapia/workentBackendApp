@@ -1,11 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api;
 
-use App\Complaint;
+use App\Company;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
-class ComplaintController extends Controller
+class CompanyController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -41,10 +42,10 @@ class ComplaintController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Complaint  $complaint
+     * @param  \App\Company  $company
      * @return \Illuminate\Http\Response
      */
-    public function show(Complaint $complaint)
+    public function show(Company $company)
     {
         //
     }
@@ -52,10 +53,10 @@ class ComplaintController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Complaint  $complaint
+     * @param  \App\Company  $company
      * @return \Illuminate\Http\Response
      */
-    public function edit(Complaint $complaint)
+    public function edit(Company $company)
     {
         //
     }
@@ -64,10 +65,10 @@ class ComplaintController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Complaint  $complaint
+     * @param  \App\Company  $company
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Complaint $complaint)
+    public function update(Request $request, Company $company)
     {
         //
     }
@@ -75,10 +76,10 @@ class ComplaintController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Complaint  $complaint
+     * @param  \App\Company  $company
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Complaint $complaint)
+    public function destroy(Company $company)
     {
         //
     }
