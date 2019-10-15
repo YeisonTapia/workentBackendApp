@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Api;
 
-use App\Company;
+use App\Company as Resource;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -15,17 +15,8 @@ class CompanyController extends Controller
      */
     public function index()
     {
-        //
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
+      $data = Resource::paginate(20);
+      return response()->json($data);
     }
 
     /**
@@ -36,7 +27,8 @@ class CompanyController extends Controller
      */
     public function store(Request $request)
     {
-        //
+      $data = Resource::create($request->all());
+      return response()->json($data);
     }
 
     /**
@@ -45,20 +37,9 @@ class CompanyController extends Controller
      * @param  \App\Company  $company
      * @return \Illuminate\Http\Response
      */
-    public function show(Company $company)
+    public function show(Company $data)
     {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Company  $company
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Company $company)
-    {
-        //
+      return response()->json($data);
     }
 
     /**
@@ -68,9 +49,10 @@ class CompanyController extends Controller
      * @param  \App\Company  $company
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Company $company)
+    public function update(Request $request, Company $data)
     {
-        //
+      $data->fill($request->all())->save();
+      return response()->json($data);
     }
 
     /**
@@ -79,8 +61,9 @@ class CompanyController extends Controller
      * @param  \App\Company  $company
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Company $company)
+    public function destroy(Company $data)
     {
-        //
+      $data->delete();
+      return response()->json($data);
     }
 }
